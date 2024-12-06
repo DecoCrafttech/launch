@@ -55,7 +55,10 @@ const Countdown = () => {
           <span className="countdown-label">Seconds</span>
         </div>
       </div>
-      <button className="btn btn-dark countdown-button mt-4 px-4 py-2">
+      <button type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#Ctamodal"
+              className="btn btn-dark countdown-button mt-4 px-4 py-2">
         Sign Up for Early Access
       </button>
     </div>

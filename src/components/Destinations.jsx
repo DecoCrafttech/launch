@@ -12,6 +12,14 @@ const Destinations = () => {
             <li><FaTruck className="icon " /> Struggling to find reliable loads daily?</li>
             <li><FaClock className="icon" /> Need trucks on time but can't find any?</li>
             <li><FaDollarSign className="icon" /> Tired of dealing with increasing operational costs?</li>
+            <button
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#Ctamodal"
+              className="btn btn-danger mt-4 p-2 px-4 d-flex justify-content-center"
+            >
+              Solve Your Trucking Needs!
+            </button>
           </ul>
         </div>
 

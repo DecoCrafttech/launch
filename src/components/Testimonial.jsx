@@ -87,7 +87,10 @@ const TruckRevolution = () => {
               trucks to fuel discounts, we’ve got everything you need to drive
               your business forward today.
             </p>
-            <button className="btn btn-danger cta-button px-4 py-2 mt-3">
+            <button type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#Ctamodal"
+              className="btn btn-danger cta-button px-4 py-2 mt-3">
               Experience It First!
             </button>
           </div>

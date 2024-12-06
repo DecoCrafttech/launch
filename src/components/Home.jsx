@@ -133,50 +133,49 @@ const Home = () => {
     <section className="home-section py-5 px-2">
       <div className="container mt-4">
         <div className="row">
-        <h1 className="fw-bold px-5 head-card">
-  Trucking Just <span className="text-warning ">Got Smarter</span>
-</h1>
+          <h1 className="fw-bold px-5 head-card">
+            Trucking Just <span className="text-warning ">Got Smarter</span>
+          </h1>
 
-         
+
           {/* Left Side Content */}
           <div className="col-lg-7 px-sm-0 px-lg-5 mt-0">
-          <p className="mt-3 text-white">
-            Say Goodbye to Trucking Challenges - Find Loads, Trucks, Drivers, Fuel, and More, All in One Smart Platform.
-          </p>
-  <div className="row">
-    {[
-      { text: "Load & Truck Booking", icon: <FaTruck /> },
-      { text: "Driver Arrangements", icon: <FaUserAlt /> },
-      { text: "Truck Buying & Selling", icon: <FaTruck /> },
-      { text: "Truck Parking", icon: <FaMapMarkerAlt /> },
-      { text: "Discounted Petrol Pump Locator", icon: <FaMapMarkerAlt /> },
-      { text: "Load Tracking", icon: <FaClipboardList /> },
-      { text: "Toll Gate & Mileage Calculators", icon: <FaDollarSign /> },
-      { text: "FAST Tag Recharge", icon: <FaDollarSign /> },
-      { text: "Commercial Insurance Renewal", icon: <FaDollarSign /> },
-    ].map((item, index, array) => (
-      <div
-        className={`col-12 col-md-6 p-2 ${
-          index === array.length - 1 ? "mx-auto" : ""
-        }`}
-        key={index}
-      >
-        <div className="feature-card text-start">
-          <span className="feature-icon">{item.icon}</span>
-          {item.text}
-        </div>
-      </div>
-    ))}
-  </div>
-  <button
-    type="button"
-    data-bs-toggle="modal"
-    data-bs-target="#headerform"
-    className="btn btn-danger mt-4 p-2 px-4 w-100"
-  > 
-    Be the First to Know
-  </button>
-</div>
+            <p className="mt-3 text-white">
+              Say Goodbye to Trucking Challenges - Find Loads, Trucks, Drivers, Fuel, and More, All in One Smart Platform.
+            </p>
+            <div className="row">
+              {[
+                { text: "Load & Truck Booking", icon: <FaTruck /> },
+                { text: "Driver Arrangements", icon: <FaUserAlt /> },
+                { text: "Truck Buying & Selling", icon: <FaTruck /> },
+                { text: "Truck Parking", icon: <FaMapMarkerAlt /> },
+                { text: "Discounted Petrol Pump Locator", icon: <FaMapMarkerAlt /> },
+                { text: "Load Tracking", icon: <FaClipboardList /> },
+                { text: "Toll Gate & Mileage Calculators", icon: <FaDollarSign /> },
+                { text: "FAST Tag Recharge", icon: <FaDollarSign /> },
+                { text: "Truck Insurance Renewal", icon: <FaDollarSign /> },
+              ].map((item, index, array) => (
+                <div
+                  className={`col-12 col-md-6 p-2 ${index === array.length - 1 ? "mx-auto" : ""
+                    }`}
+                  key={index}
+                >
+                  <div className="feature-card text-start">
+                    <span className="feature-icon">{item.icon}</span>
+                    {item.text}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <button
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#headerform"
+              className="btn btn-danger mt-4 p-2 px-4 w-100"
+            >
+              Be the First to Know
+            </button>
+          </div>
 
 
           {/* Right Side Form */}
@@ -277,108 +276,108 @@ const Home = () => {
               <h5 class="modal-title" id="staticBackdropLabel"> Form</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          
 
 
-              <h5 className="  px-4 mt-4 mb-0 text-dark fw-bold ">
-                Get Early Access to Your All-in-One Trucking Solution!
-              </h5>
 
-              <form className=" p-4 container mt-0" onSubmit={handleModalSubmit}>
+            <h5 className="  px-4 mt-4 mb-0 text-dark fw-bold ">
+              Get Early Access to Your All-in-One Trucking Solution!
+            </h5>
 
-                <div className="row">
-                  {/* Name Field */}
-                  <div className="col-md-12 mb-3">
-                    <label htmlFor="modal_full_name" className="form-label">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="modal_full_name"
-                      placeholder="Enter your full name"
-                      value={modalData.modal_full_name}
-                      onChange={handleModalChange}
-                      required
-                    />
-                  </div>
-                  {/* WhatsApp Number Field */}
-                  <div className="col-md-12 mb-3">
-                    <label htmlFor="modal_whatsapp_no" className="form-label">
-                      WhatsApp Number
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="modal_whatsapp_no"
-                      placeholder="Enter your WhatsApp number"
-                      value={modalData.whatsapp_no}
-                      onChange={handleModalChange}
-                      required
-                    />
-                  </div>
-                  {/* Email Address Field */}
-                  <div className="col-md-12 mb-3">
-                    <label htmlFor="modal_email_id" className="form-label">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      id="modal_email_id"
-                      placeholder="Enter your email address"
-                      value={modalData.email_id}
-                      onChange={handleModalChange}
-                      required
-                    />
-                  </div>
-                  {/* Business Type Field */}
-                  <div className="col-md-12 mb-3">
-                    <label htmlFor="modal_business_type" className="form-label">
-                      Business Type
-                    </label>
-                    <select
-                      className="form-select"
-                      id="modal_business_type"
-                      value={modalData.business_type}
-                      onChange={handleModalChange}
-                      required
-                    >
-                      <option value="" disabled>
-                        Select your business type
-                      </option>
-                      <option value="fleet-owner">Fleet Owner</option>
-                      <option value="truck-operator">Truck Operator</option>
-                      <option value="driver">Driver</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                  {/* Location Field */}
-                  <div className="col-12 mb-3">
-                    <label htmlFor="modal_location" className="form-label">
-                      Location
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="modal_location"
-                      placeholder="Enter your location"
-                      value={modalData.location}
-                      onChange={handleModalChange}
-                      required
-                    />
-                  </div>
-                  {/* Submit Button */}
-                  <div className="col-12">
-                    <button type="submit" className="btn btn-dark w-100 py-2">
-                      Notify Me on Launch
-                    </button>
-                  </div>
+            <form className=" p-4 container mt-0" onSubmit={handleModalSubmit}>
+
+              <div className="row">
+                {/* Name Field */}
+                <div className="col-md-12 mb-3">
+                  <label htmlFor="modal_full_name" className="form-label">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="modal_full_name"
+                    placeholder="Enter your full name"
+                    value={modalData.modal_full_name}
+                    onChange={handleModalChange}
+                    required
+                  />
                 </div>
-              </form>
-            </div>
+                {/* WhatsApp Number Field */}
+                <div className="col-md-12 mb-3">
+                  <label htmlFor="modal_whatsapp_no" className="form-label">
+                    WhatsApp Number
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="modal_whatsapp_no"
+                    placeholder="Enter your WhatsApp number"
+                    value={modalData.whatsapp_no}
+                    onChange={handleModalChange}
+                    required
+                  />
+                </div>
+                {/* Email Address Field */}
+                <div className="col-md-12 mb-3">
+                  <label htmlFor="modal_email_id" className="form-label">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="modal_email_id"
+                    placeholder="Enter your email address"
+                    value={modalData.email_id}
+                    onChange={handleModalChange}
+                    required
+                  />
+                </div>
+                {/* Business Type Field */}
+                <div className="col-md-12 mb-3">
+                  <label htmlFor="modal_business_type" className="form-label">
+                    Business Type
+                  </label>
+                  <select
+                    className="form-select"
+                    id="modal_business_type"
+                    value={modalData.business_type}
+                    onChange={handleModalChange}
+                    required
+                  >
+                    <option value="" disabled>
+                      Select your business type
+                    </option>
+                    <option value="fleet-owner">Fleet Owner</option>
+                    <option value="truck-operator">Truck Operator</option>
+                    <option value="driver">Driver</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                {/* Location Field */}
+                <div className="col-12 mb-3">
+                  <label htmlFor="modal_location" className="form-label">
+                    Location
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="modal_location"
+                    placeholder="Enter your location"
+                    value={modalData.location}
+                    onChange={handleModalChange}
+                    required
+                  />
+                </div>
+                {/* Submit Button */}
+                <div className="col-12">
+                  <button type="submit" className="btn btn-dark w-100 py-2">
+                    Notify Me on Launch
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
-        
+        </div>
+
 
       </div>
       <ToastContainer />

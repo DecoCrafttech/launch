@@ -28,8 +28,20 @@ const Categories = () => {
           </div>
         ))}
       </div>
+      <div className="d-flex justify-content-center">
+      <button
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#Ctamodal"
+              className="btn btn-danger mt-4 p-2 px-4 "
+            >
+               Find Solutions Now!
+            </button>
+      
+      </div>
       
     </section>
+    
   );
 };
 

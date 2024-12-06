@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navi from "./navigation";
 import Formsubmitpage from "./components/ThankYouPage";
-
+import YourComponent from "./components/modal";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Navi />} />
         <Route path="/thankyou" element={<Formsubmitpage />} />
+        <Route path="/modal" element={<YourComponent />} />
       </Routes>
     </BrowserRouter>
   );

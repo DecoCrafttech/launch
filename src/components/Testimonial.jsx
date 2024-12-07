@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 const TruckRevolution = () => {
+  const navigate = useNavigate(); // Hook for navigation
+
   const [formData, setFormData] = useState({
     full_name: "",
     whatsapp_no: "",
@@ -49,7 +52,11 @@ const TruckRevolution = () => {
       );
 
       if (response.status === 200) {
+       
         toast.success("Form submitted successfully!");
+        setTimeout(() => {
+          navigate("/thankyou");
+        }, 1000);
         // Reset form fields after successful submission
         setFormData({
           full_name: "",

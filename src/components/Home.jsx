@@ -55,7 +55,10 @@ const Home = () => {
           biggest_challenge: "",
           prefered_service: "",
         });
-        navigate("/thankyou"); // Redirect on success
+        setTimeout(() => {
+          navigate("/thankyou");
+        }, 1000);
+        // navigate("/thankyou"); // Redirect on success
       } else {
         const errorData = await response.json();
         toast.error(errorData.message || "Failed to submit the form. Please try again.");
@@ -116,8 +119,12 @@ const Home = () => {
           modal_business_type: "",
           modal_location: "",
         });
-        navigate("/thankyou"); // Redirect on success
+        document.getElementById("headerCloseModalButton").click()
+        setTimeout(() => {
+          navigate("/thankyou");
+        }, 1000);
       } else {
+        document.getElementById("headerCloseModalButton").click()
         toast.error("Failed to submit the form. Please try again.");
       }
     } catch (error) {
@@ -274,7 +281,7 @@ const Home = () => {
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="staticBackdropLabel"> Form</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" id="headerCloseModalButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
 
